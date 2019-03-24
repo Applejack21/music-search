@@ -1,4 +1,3 @@
-
 function ajax(url,success)
 {
 	const ajaxRequest = new XMLHttpRequest(); 
@@ -26,29 +25,31 @@ const infoP=document.getElementById("info");
 //allow \n to work on the info of the stores.
 infoP.setAttribute('style', 'white-space: pre;');
 
-function createHandler(country)
+function createHandler(musicStore)
 {
-	return function(){
-		titleH2.textContent=country.name;
-        infoP.textContent = `Music Store Name: ${country.name}. \n`;
-        infoP.textContent +=`Music Store Description: ${country.description}. \n`;
-        infoP.textContent += `Music Store Coordinates: Latitude: ${country.coordinates[0]}, Longitude: ${country.coordinates[1]}.`;
+	return function()
+    {
+		titleH2.textContent=musicStore.name;
+        infoP.textContent = `${musicStore.name} \n`;
+        infoP.textContent +=`${musicStore.description} \n`;
+        infoP.textContent += `${musicStore.name} can be found at these coordinates - Latitude: ${musicStore.coordinates[0]}, Longitude: ${musicStore.coordinates[1]}`;
 	}
 }
 
-function populateList(countries)
+function populateList(musicStores)
 {
-	countries.forEach(function(country){
+	musicStores.forEach(function(musicStore)
+    {
 		var newLi=document.createElement("li");
-		newLi.textContent=country.name;
-	    newLi.addEventListener("click", createHandler(country), false)
+		newLi.textContent=musicStore.name;
+	    newLi.addEventListener("click", createHandler(musicStore), false)
 		navList.appendChild(newLi);
 	})
 }
 
-function init(){
+function init()
+{
 	ajax("../data/musicStoreInfo.json",populateList);
 }
 
 init();
-
