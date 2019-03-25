@@ -1,17 +1,17 @@
 [
     {
         "name":"Ted's Music Store",
-	    "description":"Ted's Music Store has a collection of different songs in CD format. Usually found are Rock style of music from 80-Today.",
-        "coordinates": [53.648559, -1.7825]
-	},
-	{
-        "name":"Vintage Vinyls",
-	    "description":"Vintage Vinyls has a range of classic songs & modern songs that are available in vinyl for avid collectors to buy.",
+	    "description":"Ted's Music Store has a collection of different songs in CD format. We specialising in rock music from the 80s-today.",
         "coordinates": [53.647828, -1.79016]
 	},
 	{
+        "name":"Vinyl Tap",
+	    "description":"Vinyl Tap has a range of classic songs & modern songs that are available in vinyl for avid collectors to buy.",
+        "coordinates": [53.648092, -1.782609]
+	},
+	{
         "name":"Music Inc",
-	    "description":"Music Inc offers both CD, Vinyl and even Cassette Tape format for a range of songs and genres.",
+	    "description":"Music Inc offers both CD, and Vinyl formats for a range of songs and genres.",
         "coordinates": [53.658964, -1.788794]
     }
 ]

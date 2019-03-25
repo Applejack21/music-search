@@ -1,0 +1,13 @@
+body {
+    background-color:#fefefe;
+}
+
+.content {
+    padding-left:10px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom:5px solid #e17009;
+    width:auto;
+}

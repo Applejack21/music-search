@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNavBar" aria-controls="showNavBar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showAccBar" aria-controls="showAccBar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-user-circle"></i></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="showNavBar">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Homepage <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Search Stores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Map</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  <div class="collapse navbar-collapse" id="showAccBar">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+<h1 class="underlineheading" id="homepage">Homepage</h1>
+    
+<div class="content">
+<h3>List of stores (click a heading to find out info on each):</h3>
+<ul id="nav"></ul>
+<div id="content">
+	<h2 id="title"></h2>
+	<p id="info"></p>
+</div>
+</div>
+<script src="../js/ajaxRetrieveInfo.js"></script>
+</body>
+</html>
