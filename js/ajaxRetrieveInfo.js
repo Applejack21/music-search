@@ -22,9 +22,6 @@ const navList=document.getElementById("nav");
 const titleH2=document.getElementById("title");
 const infoP=document.getElementById("info");
 
-//allow \n to work on the info of the stores.
-infoP.setAttribute('style', 'white-space: pre;');
-
 function createHandler(musicStore)
 {
 	return function()
