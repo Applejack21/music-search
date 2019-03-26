@@ -16,7 +16,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNavBar" aria-controls="showNavBar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+    <p class="underlineheading white fontsize30">Music Search</p>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showAccBar" aria-controls="showAccBar" aria-expanded="false" aria-label="Toggle navigation">
     <span><i class="fas fa-user-circle"></i></span>
   </button>
@@ -24,7 +24,7 @@
   <div class="collapse navbar-collapse" id="showNavBar">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Homepage <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Homepage</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Search Stores</a>
@@ -33,33 +33,37 @@
         <a class="nav-link" href="#">Map</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
   <div class="collapse navbar-collapse" id="showAccBar">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Sign Up</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign Up</a>
       </li>
     </ul>
   </div>
 </nav>
     
 <h1 class="underlineheading" id="homepage">Homepage</h1>
-    
-<div class="content">
-<h3>List of stores (click a heading to find out info on each):</h3>
-<ul id="nav"></ul>
+<div class="container">
+<p>From here, you can have a look at the different stores available near you.</p>
+<p>Select a store below to see more information about it.</p>
+
+<h3>List of stores below:</h3>
+<ul id="nav" class="cursor"></ul>
 <div id="content">
-	<h2 id="title"></h2>
-	<p id="info"></p>
+    <div id="accordion">
+        <h3 id="storeName"></h3>
+        <div>
+            <p id="storeInfo"></p>
+        </div>
+    </div>
+<!--	<h2 id="storeName"></h2>-->
 </div>
 </div>
+<script src="../js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script src="../js/ajaxRetrieveInfo.js"></script>
 </body>
 </html>

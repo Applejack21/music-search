@@ -19,16 +19,16 @@ function ajax(url,success)
 
 
 const navList=document.getElementById("nav");
-const titleH2=document.getElementById("title");
-const infoP=document.getElementById("info");
+const storeName=document.getElementById("storeName");
+const storeInfo=document.getElementById("storeInfo");
 
 function createHandler(musicStore)
 {
 	return function()
     {
-		titleH2.textContent=musicStore.name;
-        infoP.textContent =`${musicStore.description} \n`;
-        infoP.textContent += `${musicStore.name} can be found at these coordinates - Latitude: ${musicStore.coordinates[0]}, Longitude: ${musicStore.coordinates[1]}`;
+		storeName.textContent=musicStore.name;
+        storeInfo.textContent =`${musicStore.description} \n`;
+        storeInfo.textContent += `${musicStore.name} can be found at these coordinates: Latitude: ${musicStore.coordinates[0]}, Longitude: ${musicStore.coordinates[1]}`;
 	}
 }
 

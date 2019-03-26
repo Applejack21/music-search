@@ -2,8 +2,14 @@
     {
         "name":"Ted's Music Store",
 	    "description":"Ted's Music Store has a collection of different songs in CD format. We specialising in rock music from the 80s-today.",
-        "coordinates": [53.647828, -1.79016]
-	},
+        "coordinates": [53.647828, -1.79016],
+        "songs": {
+            "band1":"The Rolling Stones",
+            "song1":"Paint It Black",
+            "band2":"Foo Fighters",
+            "song2":"Something from Nothing"
+        }
+    },
 	{
         "name":"Vinyl Tap",
 	    "description":"Vinyl Tap has a range of classic songs & modern songs that are available in vinyl for avid collectors to buy.",

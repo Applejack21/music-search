@@ -2,12 +2,21 @@ body {
     background-color:#fefefe;
 }
 
-.content {
+.container {
     padding-left:10px;
 }
 
-h1 {
+.underlineheading {
     text-align: center;
     border-bottom:5px solid #e17009;
     width:auto;
+}
+
+.white {
+    color: #9a9da0;
+}
+
+.fontsize30
+{
+    font-size:30px;
 }
