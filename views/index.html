@@ -4,25 +4,30 @@
     <title>Music Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1.custom/jquery-ui.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
     
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNavBar" aria-controls="showNavBar" aria-expanded="false" aria-label="Toggle navigation">
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNavBar" aria-controls="showNavBar" aria-expanded="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+    
     <p class="underlineheading white fontsize30">Music Search</p>
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showAccBar" aria-controls="showAccBar" aria-expanded="false" aria-label="Toggle navigation">
-    <span><i class="fas fa-user-circle"></i></span>
+    <span><i class="fa fa-user-circle"></i></span>
   </button>
 
   <div class="collapse navbar-collapse" id="showNavBar">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <ul class="navbar-nav mr-auto center">
       <li class="nav-item active">
         <a class="nav-link" href="#">Homepage</a>
       </li>
@@ -34,8 +39,9 @@
       </li>
     </ul>
   </div>
+    
   <div class="collapse navbar-collapse" id="showAccBar">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <ul class="navbar-nav mr-auto center">
       <li class="nav-item">
         <a class="nav-link" href="#">Login</a>
       </li>
@@ -44,26 +50,27 @@
       </li>
     </ul>
   </div>
+    
 </nav>
     
 <h1 class="underlineheading" id="homepage">Homepage</h1>
-<div class="container">
+<div class="uicontent center">
 <p>From here, you can have a look at the different stores available near you.</p>
 <p>Select a store below to see more information about it.</p>
 
 <h3>List of stores below:</h3>
-<ul id="nav" class="cursor"></ul>
+<ul id="storeList" class="cursor"></ul>
+<br>
 <div id="content">
-    <div id="accordion">
         <h3 id="storeName"></h3>
         <div>
             <p id="storeInfo"></p>
         </div>
-    </div>
-<!--	<h2 id="storeName"></h2>-->
 </div>
+
+<h3>Map of stores:</h3>
+<p>You can use the map below to see the stores relative to your position.</p>
 </div>
-<script src="../js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script src="../js/ajaxRetrieveInfo.js"></script>
 </body>
 </html>

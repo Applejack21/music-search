@@ -1,7 +1,7 @@
 [
     {
-        "name":"Ted's Music Store",
-	    "description":"Ted's Music Store has a collection of different songs in CD format. We specialising in rock music from the 80s-today.",
+        "name":"General Music",
+	    "description":"General Music has a collection of different songs in CD format. We specialising in rock music from the 80s-today.",
         "coordinates": [53.647828, -1.79016],
         "songs": {
             "band1":"The Rolling Stones",
