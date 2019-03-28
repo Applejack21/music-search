@@ -13,11 +13,23 @@
 	{
         "name":"Vinyl Tap",
 	    "description":"Vinyl Tap has a range of classic songs & modern songs that are available in vinyl for avid collectors to buy.",
-        "coordinates": [53.648092, -1.782609]
+        "coordinates": [53.648092, -1.782609],
+        "songs": {
+            "band1":"Elvis",
+            "song1":"Hound Dog",
+            "band2":"The Beatles",
+            "song2":"Hey Jude"
+        }
 	},
 	{
         "name":"Music Inc",
 	    "description":"Music Inc offers both CD, and Vinyl formats for a range of songs and genres.",
-        "coordinates": [53.658964, -1.788794]
+        "coordinates": [53.658964, -1.788794],
+        "songs": {
+            "band1":"Red Hot Chili Peppers",
+            "song1":"Under the Bridge",
+            "band2":"AC/DC",
+            "song2":"Back in Black"
+        }
     }
 ]

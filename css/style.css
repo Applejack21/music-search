@@ -35,3 +35,24 @@ body {
     cursor: pointer;
     border:2px solid #e17009;
 }
+
+#map {
+    height: 600px;
+    width: 800px;
+}
+
+.info {
+    padding: 5px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width:200px;
+    position:relative;
+    top:-200px;
+    left:20px;
+    z-index:1000;
+}
+
+.leaflet-fade-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-zoom-animated { will-change:auto !important; }
