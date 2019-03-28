@@ -52,7 +52,7 @@ const descDiv = document.querySelector("#storeMapDesc");
 
 function initMap(lat, long){
 	myMap = L.map('map', {
-        gestureHandling: true
+        gestureHandling: true //remove this line if you want to view the map on desktop
         }).setView([lat, long], 17);
 
 L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
