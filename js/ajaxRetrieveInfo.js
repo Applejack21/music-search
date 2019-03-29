@@ -9,7 +9,7 @@ function ajax(url,success)
 			{
 		    	var data=JSON.parse(ajaxRequest.responseText);
 		    	success(data); //this will call populateList
-			}
+            }
 		}
 	}
 	ajaxRequest.addEventListener("readystatechange",handleResponse,false); 
@@ -27,7 +27,7 @@ function createHandler(musicStore)
 	return function()
     {
         storeInfo.textContent =`${musicStore.description} \n`;
-        storeInfo.textContent += `${musicStore.name} can be found at these coordinates: Latitude: ${musicStore.coordinates[0]}, Longitude: ${musicStore.coordinates[1]}`;
+        storeInfo.textContent += `${musicStore.name} can be found at these coordinates: Latitude: ${musicStore.geometry.coordinates[0]}, Longitude: ${musicStore.geometry.coordinates[1]}`;
 	}
 }
 
@@ -47,5 +47,4 @@ function init()
 {
 	ajax("../data/musicStoreInfo.json",populateList);
 }
-
 init();
