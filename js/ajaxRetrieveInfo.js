@@ -39,7 +39,7 @@ function populateList(musicStores)
 	musicStores.forEach(function(musicStore)
     {
 		var newLi=document.createElement("li");
-        newLi.setAttribute("class", "storeNames");
+        newLi.setAttribute("class", "menu__storename menu__listitem--removeicon");
 		newLi.textContent=musicStore.name
 	    newLi.addEventListener("click", createHandler(musicStore), false)
 		navList.appendChild(newLi);
@@ -65,16 +65,16 @@ function doSearch()
     {
         if(searchTermLower.match(musicStores.songs.song1))
         {
-            const newParagraph = document.createElement("li");
-            newParagraph.setAttribute("class", "searchResultsLi");
+            const newParagraph = document.createElement("p");
+            newParagraph.setAttribute("class", "content--center");
             const newText = document.createTextNode(searchTerm + " by " + musicStores.songs.band1 + " can be bought from " + musicStores.name);
             newParagraph.appendChild(newText);
             divElem.appendChild(newParagraph);
         }
         else if(searchTermLower.match(musicStores.songs.song2))
         {
-            const newParagraph = document.createElement("li");
-            newParagraph.setAttribute("class", "searchResultsLi");
+            const newParagraph = document.createElement("p");
+            newParagraph.setAttribute("class", "content--center");
             const newText = document.createTextNode(searchTerm + " by " + musicStores.songs.band2 + " can be bought from " + musicStores.name);
             newParagraph.appendChild(newText);
             divElem.appendChild(newParagraph);    

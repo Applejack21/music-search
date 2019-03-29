@@ -16,20 +16,20 @@
 </head>
 <body>
     
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showNavBar" aria-controls="showNavBar" aria-expanded="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
     
-    <p class="underlineheading white fontsize30">Music Search</p>
+    <p class="title--big color-grey heading--underline underline--color-orange">Music Search</p>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#showAccBar" aria-controls="showAccBar" aria-expanded="false" aria-label="Toggle navigation">
     <span><i class="fa fa-user-circle"></i></span>
   </button>
 
   <div class="collapse navbar-collapse" id="showNavBar">
-    <ul class="navbar-nav mr-auto center">
+    <ul class="navbar-nav mr-auto content--center ">
     <div class="dropdown-divider"></div>
       <li class="nav-item active">
         <a class="nav-link" href="#">Homepage</a>
@@ -42,12 +42,12 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Map</a>
       </li>
-    <div class="dropdown-divider"></div>
     </ul>
   </div>
     
   <div class="collapse navbar-collapse" id="showAccBar">
-    <ul class="navbar-nav mr-auto center">
+    <ul class="navbar-nav mr-auto content--center">
+    <div class="dropdown-divider"></div>
       <li class="nav-item">
         <a class="nav-link" href="#">Login</a>
       </li>
@@ -55,27 +55,33 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Sign Up</a>
       </li>
-    <div class="dropdown-divider"></div>
     </ul>
   </div>
 </nav>
-    
-<h1 class="underlineheading" id="homepage">Homepage</h1>
-<div class="uicontent center">
+<br>
+<br>
+<br>
+<br>
+
+<div class="content--center">
+<h1 class="heading--underline underline--color-orange" id="homepage">Homepage</h1>
+
 <p>From here, you can have a look at the different stores available near you.</p>
 <p>Select a store below to see more information about it.</p>
 
-<h3>List of stores:</h3>
+<h3 class="heading--underline underline--color-lorange">List of stores</h3>
 <ul id="storeList" class="cursor"></ul>
 <br>
-<div id="content">
+    
+<div id="storeContent">
     <h3 id="storeName"></h3>
     <div>
         <p id="storeInfo"></p>
     </div>
 </div>
+    
 <div id="searchSection">
-<h3>Song Search:</h3>
+<h3 class="heading--underline underline--color-lorange">Song Search</h3>
 <p>Use the search bar below to find songs available from the stores.</p>
 <input id="search">
 <button id="goBtn">Search</button>
@@ -83,14 +89,19 @@
 </div>
 <br>
     
-<h3>Map of stores:</h3>
+<h3 class="heading--underline underline--color-lorange">Map of stores</h3>
 <p>You can use the map below to see the stores relative to your position.</p>
-</div>
+
 <div id="map"></div>
 <div id="info" class="info">
 <h4 id="storeMapName"></h4>
 <p id="storeMapDesc"></p>
 </div>
+</div>
+<br>
+<br>
+<br>
+    
 <script src="../js/ajaxRetrieveInfo.js"></script>
 <script src="../js/musicStoreMap.js"></script>
 <link rel="stylesheet" href="../leaflet-gesture-handling/leaflet-gesture-handling.min.css">
