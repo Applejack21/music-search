@@ -11,9 +11,9 @@
         "songs": 
         {
             "band1":"The Rolling Stones",
-            "song1":"Paint It Black",
+            "song1":"paint it black",
             "band2":"Foo Fighters",
-            "song2":"Something from Nothing"
+            "song2":"something from nothing"
         }
     },
 	{
@@ -27,7 +27,7 @@
         },
         "songs": {
             "band1":"Elvis",
-            "song1":"Hound Dog",
+            "song1":"hound dog",
             "band2":"The Beatles",
             "song2":"Hey Jude"
         }
@@ -44,9 +44,9 @@
         "songs": 
         {
             "band1":"Red Hot Chili Peppers",
-            "song1":"Under the Bridge",
+            "song1":"under the bridge",
             "band2":"AC/DC",
-            "song2":"Back in Black"
+            "song2":"back in black"
         }
     }
 ]

@@ -48,22 +48,26 @@ function populateList(musicStores)
 
 const search = document.querySelector("#search");
 let btn = document.querySelector("#goBtn");
+search.addEventListener("keyup", doSearch, true);
 btn.addEventListener("click", doSearch, true);
 
 function doSearch()
 {
     const divElem = document.querySelector("#searchResults");
     const searchTerm = search.value;
-    console.log("User's search term: " + searchTerm);
+    var searchTermLower = searchTerm.toLowerCase();
     
+    while(divElem.firstChild)
+        {
+            divElem.removeChild(divElem.firstChild);
+        }
     musicStores.forEach(function(musicStores)
     {
-        if(searchTerm.match(musicStores.songs.song1))
+        if(searchTermLower.match(musicStores.songs.song1))
         {
-            console.log(searchTerm + " can be bought from " + musicStores.name);
             const newParagraph = document.createElement("li");
             newParagraph.setAttribute("class", "searchResultsLi");
-            const newText = document.createTextNode(searchTerm + " can be bought from " + musicStores.name);
+            const newText = document.createTextNode(searchTerm + " by " + musicStores.songs.band1 + " can be bought from " + musicStores.name);
             newParagraph.appendChild(newText);
             divElem.appendChild(newParagraph);
         }
