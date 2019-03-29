@@ -7,7 +7,7 @@ function initMap(lat, long)
     {
         myMap = L.map('map', 
         {
-            gestureHandling: true //comment out this line if you want to view the map on desktop
+            gestureHandling: true //comment out this line if you want to view the map on desktop (might not need to actually)
         }
         ).setView([lat, long], 17);
 
