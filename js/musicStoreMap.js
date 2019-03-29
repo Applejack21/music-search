@@ -1,68 +1,23 @@
-const musicStores =[
-    {
-        "name":"General Music",
-	    "description":"General Music has a collection of different songs in CD format. We specialising in rock music from the 80s-today.",
-        "geometry": {
-	    "type": "Point",
-	    "coordinates": [53.647828, -1.79016]
-        },
-        "songs": {
-            "band1":"The Rolling Stones",
-            "song1":"Paint It Black",
-            "band2":"Foo Fighters",
-            "song2":"Something from Nothing"
-        }
-    },
-	{
-        "name":"Vinyl Tap",
-	    "description":"Vinyl Tap has a range of classic songs & modern songs that are available in vinyl for avid collectors to buy.",
-        "geometry": {
-	    "type": "Point",
-	    "coordinates": [53.648092, -1.782609]
-        },
-        "songs": {
-            "band1":"Elvis",
-            "song1":"Hound Dog",
-            "band2":"The Beatles",
-            "song2":"Hey Jude"
-        }
-	},
-	{
-        "name":"Music Inc",
-	    "description":"Music Inc offers both CD, and Vinyl formats for a range of songs and genres.",
-        "geometry": 
-        {
-	        "type": "Point",
-            "coordinates": [53.658964, -1.788794]
-        },
-        "songs": 
-        {
-            "band1":"Red Hot Chili Peppers",
-            "song1":"Under the Bridge",
-            "band2":"AC/DC",
-            "song2":"Back in Black"
-        }
-    }
-];
-
 const infoDiv = document.querySelector("#info");
 const nameDiv = document.querySelector("#storeMapName");
 const descDiv = document.querySelector("#storeMapDesc");
 
 
-function initMap(lat, long){
-	myMap = L.map('map', {
-        gestureHandling: true //comment out this line if you want to view the map on desktop
-        }).setView([lat, long], 17);
-
-L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(myMap);
-   
-    musicStores.forEach(function(musicStore)
+function initMap(lat, long)
     {
-        console.log(musicStore);
+        myMap = L.map('map', 
+        {
+            gestureHandling: true //comment out this line if you want to view the map on desktop
+        }
+        ).setView([lat, long], 17);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+	   maxZoom: 18,
+	   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(myMap);
+   
+        musicStores.forEach(function(musicStore)
+    {
         let musicStoreName = musicStore.name;
         let musicStoreDesc = musicStore.description;
         let musicStoreLat = musicStore.geometry.coordinates[0];
@@ -75,7 +30,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 
 function getTInfo(musicStore){
     return function(){
-        console.log(musicStore.name);
         nameDiv.textContent = musicStore.name;
         descDiv.textContent = musicStore.description;
     }
@@ -102,6 +56,3 @@ function getUserPosition()
 {
     navigator.geolocation.getCurrentPosition(itWorks, itDoesntWork);
 }
-
-
-window.addEventListener("load",getUserPosition,false);

@@ -1,3 +1,5 @@
+var musicStores;
+
 function ajax(url,success)
 {
 	const ajaxRequest = new XMLHttpRequest(); 
@@ -7,8 +9,9 @@ function ajax(url,success)
 		{
 			if(ajaxRequest.status===200)
 			{
-		    	var data=JSON.parse(ajaxRequest.responseText);
-		    	success(data); //this will call populateList
+		    	musicStores = JSON.parse(ajaxRequest.responseText);
+                success(musicStores); //this will call populateList
+		    	getUserPosition();
             }
 		}
 	}
@@ -41,6 +44,32 @@ function populateList(musicStores)
 	    newLi.addEventListener("click", createHandler(musicStore), false)
 		navList.appendChild(newLi);
 	})
+}
+
+let btn=document.querySelector("#goBtn");
+btn.addEventListener("click", doSearch, true);
+
+function doSearch(musicStores)
+{
+    console.log(musicStores.name);
+    const divElem = document.querySelector("#searchResults");
+    const searchTerm = search.value;
+    
+    while(divElem.firstChild)
+        {
+            divElem.removeChild(divElem.firstChild);
+        }
+    
+    musicStores.forEach(function(musicStore)
+    {
+        if(musicStore.name.search(searchTerm)>-1)
+            {
+                const newParagraph = document.createElement("li");
+                const newText = document.createTextNode(musicStore.name);
+                newParagraph.appendChild(newText);
+                divElem.appendChild(newParagraph);
+            }
+    });
 }
 
 function init()
