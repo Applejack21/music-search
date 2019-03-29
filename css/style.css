@@ -26,6 +26,10 @@ body {
     text-align: center;
 }
 
+.searchResultsLi {
+    list-style-type: none;
+}
+
 .storeNames {
     list-style-type:none;
     margin-right:15px;

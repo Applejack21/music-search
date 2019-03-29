@@ -62,15 +62,8 @@ function doSearch()
         {
             console.log(searchTerm + " can be bought from " + musicStores.name);
             const newParagraph = document.createElement("li");
+            newParagraph.setAttribute("class", "searchResultsLi");
             const newText = document.createTextNode(searchTerm + " can be bought from " + musicStores.name);
-            newParagraph.appendChild(newText);
-            divElem.appendChild(newParagraph);
-        }
-        else
-        {
-            console.log("No results found from your search term: " + searchTerm);
-            const newParagraph = document.createElement("li");
-            const newText = document.createTextNode("No results found from your search term: " + searchTerm);
             newParagraph.appendChild(newText);
             divElem.appendChild(newParagraph);
         }
