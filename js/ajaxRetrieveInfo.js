@@ -71,6 +71,14 @@ function doSearch()
             newParagraph.appendChild(newText);
             divElem.appendChild(newParagraph);
         }
+        else if(searchTermLower.match(musicStores.songs.song2))
+        {
+            const newParagraph = document.createElement("li");
+            newParagraph.setAttribute("class", "searchResultsLi");
+            const newText = document.createTextNode(searchTerm + " by " + musicStores.songs.band2 + " can be bought from " + musicStores.name);
+            newParagraph.appendChild(newText);
+            divElem.appendChild(newParagraph);    
+        }
     })
 }
 
