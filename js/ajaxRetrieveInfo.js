@@ -11,7 +11,7 @@ function ajax(url,success)
 			{
 		    	musicStores = JSON.parse(ajaxRequest.responseText);
                 success(musicStores); //this will call populateList
-		    	getUserPosition();
+		    	getUserPosition(); //this will allow the map to work
             }
 		}
 	}
@@ -40,40 +40,46 @@ function populateList(musicStores)
     {
 		var newLi=document.createElement("li");
         newLi.setAttribute("class", "storeNames");
-		newLi.textContent=musicStore.name;
+		newLi.textContent=musicStore.name
 	    newLi.addEventListener("click", createHandler(musicStore), false)
 		navList.appendChild(newLi);
 	})
 }
 
-let btn=document.querySelector("#goBtn");
+const search = document.querySelector("#search");
+let btn = document.querySelector("#goBtn");
 btn.addEventListener("click", doSearch, true);
 
-function doSearch(musicStores)
+function doSearch()
 {
-    console.log(musicStores.name);
     const divElem = document.querySelector("#searchResults");
     const searchTerm = search.value;
+    console.log("User's search term: " + searchTerm);
     
-    while(divElem.firstChild)
-        {
-            divElem.removeChild(divElem.firstChild);
-        }
-    
-    musicStores.forEach(function(musicStore)
+    musicStores.forEach(function(musicStores)
     {
-        if(musicStore.name.search(searchTerm)>-1)
-            {
-                const newParagraph = document.createElement("li");
-                const newText = document.createTextNode(musicStore.name);
-                newParagraph.appendChild(newText);
-                divElem.appendChild(newParagraph);
-            }
-    });
+        if(searchTerm.match(musicStores.songs.song1))
+        {
+            console.log(searchTerm + " can be bought from " + musicStores.name);
+            const newParagraph = document.createElement("li");
+            const newText = document.createTextNode(searchTerm + " can be bought from " + musicStores.name);
+            newParagraph.appendChild(newText);
+            divElem.appendChild(newParagraph);
+        }
+        else
+        {
+            console.log("No results found from your search term: " + searchTerm);
+            const newParagraph = document.createElement("li");
+            const newText = document.createTextNode("No results found from your search term: " + searchTerm);
+            newParagraph.appendChild(newText);
+            divElem.appendChild(newParagraph);
+        }
+    })
 }
 
 function init()
 {
-	ajax("../data/musicStoreInfo.json",populateList);
+	ajax("../data/musicStoreInfo.json",populateList,doSearch);
 }
+
 init();

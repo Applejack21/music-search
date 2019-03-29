@@ -1,5 +1,6 @@
 [
     {
+        "id":0,
         "name":"General Music",
 	    "description":"General Music has a collection of different songs in CD format. We specialising in rock music from the 80s-today.",
         "geometry": 
@@ -16,6 +17,7 @@
         }
     },
 	{
+        "id":1,
         "name":"Vinyl Tap",
 	    "description":"Vinyl Tap has a range of classic songs & modern songs that are available in vinyl for avid collectors to buy.",
         "geometry": 
@@ -31,6 +33,7 @@
         }
 	},
 	{
+        "id":2,
         "name":"Music Inc",
 	    "description":"Music Inc offers both CD, and Vinyl formats for a range of songs and genres.",
         "geometry": 
