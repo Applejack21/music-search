@@ -1,5 +1,5 @@
-# music-search application for assignment 2
-Assignment 2 application files, using AJAX to load data and display them via a search, on click event or on a map.\
+# music-search application using plain JavaScript
+Using AJAX to load data and display them via a search, on click event or on a map.\
 In musicStoreMap.js you'll see:
 ```
 gestureHandling: true
