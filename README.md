@@ -1,5 +1,8 @@
 # music-search application using plain JavaScript
-Using AJAX to load data and display them via a search, on click event or on a map.\
+
+**If you're using this application on a desktop web browser, make sure you've changed to "Responsive Design Mode" (Firefox) or "Toggle Device Toolbar" (Chrome) to simulate its design on a mobile device.**
+
+This uses AJAX to load data from a .JSON file and display them via a search, on click event or on a map.\
 In musicStoreMap.js you'll see:
 ```
 gestureHandling: true
